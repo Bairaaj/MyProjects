@@ -58,6 +58,7 @@ const Skills = () =>{
   console.log("Skills Rendered");
   return(
     <div className="skills">
+      <img src='./assets/C++.png'/>
       <h1>Programming Languages</h1>
       <ul>
         <li>HTML</li>
