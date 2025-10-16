@@ -1,7 +1,6 @@
 import './App.css'; // Ensure this is at the top of your file
 import {useRef} from 'react';
-import blahGif from './assets/blah.gif';
-
+import images from './Utility.jsx';
 
 const Main = () =>{
   console.log("Main Rendered");
@@ -25,6 +24,7 @@ const Main = () =>{
 const NavBar = () =>{
   console.log("NavBar Rendered");
   return (
+    
     <div className = 'navbar'>
       <a href='#about' id="MeSelect">About Me</a>
       <a href='#skills' id='SkillSelect'>Skills</a>
@@ -40,7 +40,7 @@ const AboutMe = () =>{
     <div className="about-me">
       <h1>About Me</h1>
       <h3>My Name is Adrian Baira</h3>
-      <img src={blahGif} alt="Adrian Baira" width="200" height="200" />
+      <img src='' alt="Adrian Baira" width="200" height="200" />
       <p>
         I am currently working on my development process and expanding my knowledge of technology.
         I am a Filipino Canadian, living in Edmonton, Canada. I love tinkering with electronics and cars,
@@ -53,6 +53,20 @@ const AboutMe = () =>{
     </div>
   );
 }
+
+const Gallery = () => {
+  console.log("Gallery Rendered");
+  console.log(images); // Log the images object to verify its contents
+  return (
+    <div className="gallery">
+      {Object.keys(images).map((key) => (
+        <img key={key} src={images[key]} alt={key} />
+      ))}
+    </div>
+  );
+}
+
+    
 
 const Skills = () =>{
   console.log("Skills Rendered");
@@ -122,6 +136,9 @@ const Contact = () =>{
     </div>
     )
 }
+
+
+
 
 export {Main};
 export {NavBar};
