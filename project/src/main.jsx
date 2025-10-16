@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom/client'
-import App, { Tuff } from './App'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+import { Main } from './App'
+import './index.css'; // Ensure this is imported for global styles
+ReactDOM.createRoot(document.getElementById('root')).render(<Main />)
 
-ReactDOM.createRoot(document.getElementById('root2')).render(<Tuff />)
+
+
