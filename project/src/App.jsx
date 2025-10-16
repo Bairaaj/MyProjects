@@ -10,6 +10,7 @@ const Main = () =>{
       <AboutMe />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   )
 }
@@ -101,11 +102,14 @@ const Contact = () =>{
   return(
     <div className="contact">
       <h1>Contact Me</h1>
-      <p>Email: ajbaira@hotmail.com
-      </p>
+      <p>Email: ajbaira@hotmail.com</p>
       <p>Phone: 780-905-3413</p>
-      <a href="https://www.linkedin.com/in/adrian-baira-5b4b9821b/"> Linkdin Profile</a>
-      <a
+      <a href="www.linkedin.com/in/adrian-baira-3bb774304" target='_blank' rel='noopener noreferrer'> Linkdin Profile</a>
+      <br></br>
+      <a href="https://github.com/Bairaaj" target='_blank' rel='noopener noreferrer'> GitHub Profile</a>
+
+
+      <p>If you'd like to communicate with me </p>
     </div>
     )
 }
