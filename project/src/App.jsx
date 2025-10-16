@@ -7,10 +7,18 @@ const Main = () =>{
   console.log("Main Rendered");
   return(
     <div>
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div id="about">
+        <AboutMe />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   )
 }
@@ -18,7 +26,7 @@ const NavBar = () =>{
   console.log("NavBar Rendered");
   return (
     <div className = 'navbar'>
-      <a href='#me' id="MeSelect">About Me</a>
+      <a href='#about' id="MeSelect">About Me</a>
       <a href='#skills' id='SkillSelect'>Skills</a>
       <a href='#projects' id="ProjectSelect">Projects</a>
       <a href='#contact' id='ConactSelect'>Contact</a>
