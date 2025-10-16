@@ -11,5 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
+  margin-top: 2.5%;
+}
+#nav
+{
+  text-align: center;
+}
+.main {
+  padding: 20px;
+  margin-top: 10%; /* To avoid content being hidden behind the fixed navbar */
+}

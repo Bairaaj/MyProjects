@@ -2,11 +2,11 @@ import './App.css'; // Ensure this is at the top of your file
 import {useRef} from 'react';
 import blahGif from './assets/blah.gif';
 
+
 const Main = () =>{
   console.log("Main Rendered");
   return(
     <div>
-      <NavBar />
       <AboutMe />
       <Skills />
       <Projects />
@@ -18,10 +18,10 @@ const NavBar = () =>{
   console.log("NavBar Rendered");
   return (
     <div className = 'navbar'>
-      <h1 id="MeSelect">About Me</h1>
-      <h1 id='SkillSelect'>Skills</h1>
-      <h1 id="ProjectSelect">Projects</h1>
-      <h1 id='ConactSelect'>Contact</h1>
+      <a href='#me' id="MeSelect">About Me</a>
+      <a href='#skills' id='SkillSelect'>Skills</a>
+      <a href='#projects' id="ProjectSelect">Projects</a>
+      <a href='#contact' id='ConactSelect'>Contact</a>
     </div>
   )
 }
@@ -115,3 +115,4 @@ const Contact = () =>{
 }
 
 export {Main};
+export {NavBar};
