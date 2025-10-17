@@ -54,9 +54,31 @@ const AboutMe = () =>{
 
 const Skills = () =>{
   console.log("Skills Rendered");
+  console.log(HtmlArray().length);
+  let randomNumber = Math.floor(Math.random() * (HtmlArray().length));
+  let imageOne = randomNumber;
+  let imageTwo = null;
+  let imageThree = null;
+  
+  // Ensure unique random numbers for imageTwo and imageThree
+  do {
+    imageTwo = Math.floor(Math.random() * (HtmlArray().length));
+  } while (imageTwo === imageOne);
+  
+  do {
+    imageThree = Math.floor(Math.random() * (HtmlArray().length));
+  } while (imageThree === imageOne || imageThree === imageTwo);
+
+  console.log(
+    imageOne,
+    imageTwo,
+    imageThree
+  );
   return(
     <div className="skills">
-      <img src='./assets/C++.png'/>
+      {HtmlArray()[imageOne]}
+      {HtmlArray()[imageTwo]}
+      {HtmlArray()[imageThree]}
       <h1>Programming Languages</h1>
       <ul>
         <li>HTML</li>
@@ -114,7 +136,12 @@ const Contact = () =>{
       <a href="www.linkedin.com/in/adrian-baira-3bb774304" target='_blank' rel='noopener noreferrer'> Linkdin Profile</a>
       <br></br>
       <a href="https://github.com/Bairaaj" target='_blank' rel='noopener noreferrer'> GitHub Profile</a>
-
+      <br></br>
+      <input type="text" placeholder="Your Email Address" />
+      <br></br>
+      <textarea placeholder="Your Message"></textarea>
+      <br></br>
+      <button type="submit">Send Message</button>
 
       <p>If you'd like to communicate with me </p>
     </div>

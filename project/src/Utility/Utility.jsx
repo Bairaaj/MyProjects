@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 // Dynamically load all images from the assets/images folder
 const images = import.meta.glob('./assets/images/*.{png,jpg,jpeg,svg,gif,webp}', { eager: true });
@@ -16,5 +16,14 @@ const HtmlArray = () =>{
   });
   return listItems;
 }
+
+
+
+
+///Sending A message to my personal email (not functional yet)
+
+
+
+
 
 export default HtmlArray;
