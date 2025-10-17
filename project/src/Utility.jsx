@@ -1,12 +1,20 @@
-//Import all images from Asset Folder
-const importAll = (r) => {
-  let images = {};
-  r.keys().forEach((item) => 
-    { 
-      images[item.replace('./', '')] = r(item); 
-    });
-  return images;
+import React from 'react';
+
+// Dynamically load all images from the assets/images folder
+const images = import.meta.glob('./assets/images/*.{png,jpg,jpeg,svg,gif,webp}', { eager: true });
+
+// Create an array of image objects (name and path)
+const imageArray = Object.keys(images).map((path) => ({
+  name: path.replace('./assets/images/', ''), // Get the file name
+  src: images[path].default || images[path], // Get the image path
+}));
+
+const HtmlArray = () =>{
+  let listItems = [];
+  imageArray.forEach(image => {
+    listItems.push(<img key={image.name} src={image.src} alt={image.name} width="200" height="200" />)
+  });
+  return listItems;
 }
- const images = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
- 
- export default images;
+
+export default HtmlArray;
