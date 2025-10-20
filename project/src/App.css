@@ -7,13 +7,14 @@
 .navbar {
   background-color: #333;
   overflow: hidden;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;  
   top: 0;
+  left: 0;
+  right: 0;
   position: fixed;
-  padding: 1%;
   width: 100%;
-  display: block;
+  display: flex;
 }
 .navbar a {
   color: white;
@@ -26,15 +27,19 @@
   background: #ddd;
   color: black;
 }
-#MeSelect{
-
+#grid-container {
+  display: grid;
+  grid-template-columns: .1fr 2fr .1fr;
+  
 }
-#SkillSelect{
 
+.about-me, .skills, .projects, .contact {
+  padding-top: 5%;
+  grid-column: 2 / 3;
+  height: 100vh; /* 100% of the viewport height */
+  width: 100%;  /* 100% of the viewport width */
 }
-#ProjectSelect{
 
-}
-#ConactSelect{
-
+#about {
+  background-color: blue;
 }

@@ -1,21 +1,13 @@
 import './App.css'; // Ensure this is at the top of your file
-import HtmlArray from './Utility.jsx';
+import HtmlArray from './Utility/Utilitys.jsx';
 const Main = () =>{
   console.log("Main Rendered");
   return(
-    <div>
-      <div id="about">
-        <AboutMe />
-      </div>
-      <div id="skills">
-        <Skills />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
+    <div id='grid-container'>
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <Contact />
     </div>
   )
 }
@@ -23,10 +15,10 @@ const NavBar = () =>{
   console.log("NavBar Rendered");
   return (
     <div className = 'navbar'>
-      <a href='#about' id="MeSelect">About Me</a>
-      <a href='#skills' id='SkillSelect'>Skills</a>
-      <a href='#projects' id="ProjectSelect">Projects</a>
-      <a href='#contact' id='ConactSelect'>Contact</a>
+      <a href='#aboutNav' id="MeSelect">About Me</a>
+      <a href='#skillNav' id='SkillSelect'>Skills</a>
+      <a href='#projectsNav' id="ProjectSelect">Projects</a>
+      <a href='#contactNav' id='ConactSelect'>Contact</a>
     </div>
   )
 }
@@ -34,7 +26,7 @@ const NavBar = () =>{
 const AboutMe = () =>{
   console.log("AboutMe Rendered");
   return(
-    <div className="about-me">
+    <div id='aboutNav'className="about-me">
       <h1>About Me</h1>
       <h3>My Name is Adrian Baira</h3>
       <img src='blah.gif' alt="Adrian Baira" width="200" height="200" />
@@ -59,26 +51,34 @@ const Skills = () =>{
   let imageOne = randomNumber;
   let imageTwo = null;
   let imageThree = null;
-  
-  // Ensure unique random numbers for imageTwo and imageThree
-  do {
-    imageTwo = Math.floor(Math.random() * (HtmlArray().length));
-  } while (imageTwo === imageOne);
-  
-  do {
-    imageThree = Math.floor(Math.random() * (HtmlArray().length));
-  } while (imageThree === imageOne || imageThree === imageTwo);
+  if (HtmlArray().length > 0)
+    {
+      // Ensure unique random numbers for imageTwo and imageThree
+      do {
+        imageTwo = Math.floor(Math.random() * (HtmlArray().length));
+      } while (imageTwo === imageOne);
+        
+      do {
+      imageThree = Math.floor(Math.random() * (HtmlArray().length));
+      } while (imageThree === imageOne || imageThree === imageTwo);
 
-  console.log(
-    imageOne,
-    imageTwo,
-    imageThree
-  );
+      console.log(
+        imageOne,
+        imageTwo,
+        imageThree
+      );
+    } 
+    
   return(
-    <div className="skills">
-      {HtmlArray()[imageOne]}
-      {HtmlArray()[imageTwo]}
-      {HtmlArray()[imageThree]}
+    <div id='skillNav' className="skills">
+      {
+        HtmlArray().length > 0 ? (
+          <div>
+            {HtmlArray()[imageOne]}
+            {HtmlArray()[imageTwo]}
+            {HtmlArray()[imageThree]}
+          </div>
+      ) : null}
       <h1>Programming Languages</h1>
       <ul>
         <li>HTML</li>
@@ -112,7 +112,7 @@ const Skills = () =>{
 const Projects = () =>{
   console.log("Projects Rendered");
   return(
-    <div className="projects">
+    <div id='projectsNav'className="projects">
       <h1>Projects</h1>
       <ul>
         <li>Portfolio Website (This Website)</li>
@@ -129,7 +129,7 @@ const Projects = () =>{
 const Contact = () =>{
   console.log("Contact Rendered");
   return(
-    <div className="contact">
+    <div id='contactNav'className="contact">
       <h1>Contact Me</h1>
       <p>Email: ajbaira@hotmail.com</p>
       <p>Phone: 780-905-3413</p>
