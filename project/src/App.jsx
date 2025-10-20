@@ -27,18 +27,25 @@ const AboutMe = () =>{
   console.log("AboutMe Rendered");
   return(
     <div id='aboutNav'className="about-me">
-      <h1>About Me</h1>
-      <h3>My Name is Adrian Baira</h3>
-      <img src='blah.gif' alt="Adrian Baira" width="200" height="200" />
-      <p>
-        I am currently working on my development process and expanding my knowledge of technology.
-        I am a Filipino Canadian, living in Edmonton, Canada. I love tinkering with electronics and cars,
-        doing all sorts of things, and experiencing life and having fun along the way.
-      </p>
-      <p>
-        A little things about myself. My hobbies are playing volleyball, working out, and snowboarding,
+      <div id='MeDesc'>
+        <h1>Hello, My Name is Adrian Baira</h1>
+        <p>
+          I am currently working on my development process and expanding my knowledge of technology.
+          I am a Filipino Canadian, living in Edmonton, Canada. I love tinkering with electronics and cars,
+          doing all sorts of things, and experiencing life and having fun along the way.
+        </p>
+      </div>
+      <div id='MEImage'>
+        <img src='blah.gif' alt="Adrian Baira" width="200" height="200" />
+        <h3>A Little About Me</h3>
+        <p>
+        My hobbies are playing volleyball, working out, and snowboarding,
         and I’m starting to tip my toes into collecting pokemon cards.
-      </p>
+        </p>
+      </div>
+      
+      
+      
     </div>
   );
 }
@@ -71,6 +78,8 @@ const Skills = () =>{
     
   return(
     <div id='skillNav' className="skills">
+      
+      <h1>Programming Languages</h1>
       {
         HtmlArray().length > 0 ? (
           <div>
@@ -79,8 +88,7 @@ const Skills = () =>{
             {HtmlArray()[imageThree]}
           </div>
       ) : null}
-      <h1>Programming Languages</h1>
-      <ul>
+      <ul>        
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>

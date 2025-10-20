@@ -12,7 +12,7 @@ const imageArray = Object.keys(images).map((path) => ({
 const HtmlArray = () =>{
   let listItems = [];
   imageArray.forEach(image => {
-    listItems.push(<img key={image.name} src={image.src} alt={image.name} width="200" height="200" />)
+    listItems.push(<img key={image.name} src={image.src} alt={image.name} width="100" height="100" />)
   });
   return listItems;
 }

@@ -34,12 +34,39 @@
 }
 
 .about-me, .skills, .projects, .contact {
-  padding-top: 5%;
   grid-column: 2 / 3;
   height: 100vh; /* 100% of the viewport height */
   width: 100%;  /* 100% of the viewport width */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
-#about {
-  background-color: blue;
+#MEImage {
+  grid-column: 2 / 3;
+  align-self: center;
+  
 }
+#MEImage img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#MeDesc 
+{
+  grid-column: 1 / 2  ;
+  align-self: center;
+  text-align: left;
+}
+
+#MeDesc p
+{
+  padding-right: 45%;
+}
+#MeDesc h3
+{
+  padding-bottom: 20px;
+}
+
+
