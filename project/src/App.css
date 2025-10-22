@@ -69,4 +69,20 @@
   padding-bottom: 20px;
 }
 
+#LanguagesTitle, #LanguagesImages, #DevToolsSkills, #OtherSkillsTitle
+{
+  
+  grid-column: 1 / 3;
+  align-self: center;
+  justify-items: center;
+  text-align: center;
+  display: grid;
+  gap: 20px;
+  padding: 0 50px;
+}
 
+#lanuagesTitle
+{
+  align-self: center;
+  text-align:;
+}

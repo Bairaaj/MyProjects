@@ -12,7 +12,7 @@ const imageArray = Object.keys(images).map((path) => ({
 const HtmlArray = () =>{
   let listItems = [];
   imageArray.forEach(image => {
-    listItems.push(<img key={image.name} src={image.src} alt={image.name} width="100" height="100" />)
+    listItems.push(<img key={image.name} src={image.src} alt={image.name} width="150" height="150" />)
   });
   return listItems;
 }
@@ -23,7 +23,24 @@ const HtmlArray = () =>{
 ///Sending A message to my personal email (not functional yet)
 
 
-
-
+//
+const InfiniteImagesScroll = () =>
+{
+  let Images = HtmlArray();
+  return (
+    <div className="infinite-scroll-container">
+      <div className="infinite-scroll-content">
+        {Images.map((image, index) => 
+        (
+          <img className="infinite-scroll-item" key={index} src ={image.props.src} width="150" height="150"/>
+        ))}
+        {Images.map((img, index) => (
+          <img key={`dup-${index}`} src={img} alt="" />
+        ))}
+      </div>
+    </div>
+  );
+}
+export {InfiniteImagesScroll};
 
 export default HtmlArray;

@@ -1,5 +1,5 @@
 import './App.css'; // Ensure this is at the top of your file
-import HtmlArray from './Utility/Utilitys.jsx';
+import HtmlArray, {InfiniteImagesScroll} from './Utility/Utilitys.jsx';
 const Main = () =>{
   console.log("Main Rendered");
   return(
@@ -77,42 +77,63 @@ const Skills = () =>{
     } 
     
   return(
+    
     <div id='skillNav' className="skills">
-      
-      <h1>Programming Languages</h1>
-      {
+      <br></br>
+      <div id='LanguagesTitle'>
+        <h1>Programming Languages</h1>
+      </div>
+      <div id='LanguagesImages'>
+        {
         HtmlArray().length > 0 ? (
           <div>
-            {HtmlArray()[imageOne]}
-            {HtmlArray()[imageTwo]}
-            {HtmlArray()[imageThree]}
+           
+            {InfiniteImagesScroll()}
           </div>
-      ) : null}
-      <ul>        
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>C</li>
-        <li>C++</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>C# (Intermediate)</li>
-      </ul>
-      <h1>Development Tools</h1>
-      <ul>
-        <li>Visual Studio Code</li>
-        <li>Git</li>
-        <li>Visual Studio</li>
-        <li>SQL Server Management</li>
-      </ul>
 
-      <h1>Other Skills</h1>
-      <ul>
-        <li>Multi Tasking</li>
+          
+        ) : null}
+        {/* <ul>        
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>C# (Intermediate)</li>
+        </ul> */}
+        <div id='DevToolsTitle'>
+          <h1>Development Tools</h1>
+        </div>
+      </div>
+      <div id='DevToolsSkills'>
+        
+        <img src="assets/images/vscode.png" alt="VS Code" width="50" height="50"/>
+        <img src="git.png" alt="Git" width="50" height="50"/>
+        <img src="visualstudio.png" alt="Visual Studio" width="50" height="50"/>
+        <img src="ssms.png" alt="SQL Server Management Studio" width="50" height="50"/>
+        {/* <ul>
+          <li>Visual Studio Code</li>
+          <li>Git</li>
+          <li>Visual Studio</li>
+          <li>SQL Server Management</li>
+        </ul> */}
+      </div>
+      <div id='OtherSkillsTitle'>
+          <h1>Other Skills</h1>
+        <ul>
+          <li>Multi Tasking</li>
         <li>TeamWork and Collaboration</li>
-      </ul>
+        </ul>
+      </div>
+        
+
+
+      
+      
     </div>
   );
 }
@@ -121,6 +142,7 @@ const Projects = () =>{
   console.log("Projects Rendered");
   return(
     <div id='projectsNav'className="projects">
+      <br></br>
       <h1>Projects</h1>
       <ul>
         <li>Portfolio Website (This Website)</li>

@@ -1,0 +1,37 @@
+/* src/components/InfiniteImageScroller.css */
+.infinite-scroll-container {
+  /* Set a fixed height and hide overflow */
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.infinite-scroll-content {
+  /* Use a flexbox container with twice the width to hold duplicated images */
+  display: flex;
+  width: 200%;
+  animation: scroll 10s linear infinite; /* Customize duration */
+}
+
+.infinite-scroll-content:hover {
+  animation-play-state: paused; /* Pause on hover */
+}
+
+.infinite-scroll-content img {
+  /* Image styling */
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents images from shrinking */
+
+}
+
+@keyframes scroll {
+  /* Animate the content from 0% to -100% of its width */
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
