@@ -1,0 +1,48 @@
+Adrian Baira
+Edmonton, AB
+(780) 905-3413
+Ajbaira@hotmail.com
+
+Objective
+Motivated and detail-oriented graduate of NAIT’s Computer Engineering Technology program with hands-on experience in programming, hardware-software integration, and team-based technical projects. Seeking an entry-level role at a tech company to grow professionally and contribute technical and problem-solving skills.
+
+Education
+Northern Alberta Institute of Technology (NAIT)
+Diploma – Computer Engineering Technology
+2022 – 2025
+- Specialized in embedded systems, software development, circuit design, and networking
+- Completed multiple collaborative projects simulating real-world tech environments
+
+Projects
+Automated Connect 4 Game Board
+Capstone / Personal Project
+- Designed and built a physical Connect 4 board using motors, sensors, and microcontrollers
+- Programmed game logic, motor control, and wireless multiplayer functionality using C and Python
+- Integrated hardware and software for accurate detection and remote play experience
+Collaborative Whiteboard App
+- Built a real-time shared whiteboard tool using C#, TCP/IP sockets, and Python
+- Developed custom networking logic and GUI for multi-user collaboration
+Microcontroller Sensor System
+- Designed a PCB with KiCad and developed firmware to capture and display real-time sensor data
+
+Work Experience
+Stock Associate / Sales Associate / Cashier
+Foot Locker, Edmonton, AB
+[Month, Year] – Present
+- Received, verified, and organized stock to maintain accurate inventory and restocking levels
+- Assisted customers with product selection, fitting, and purchases to enhance sales performance
+- Operated POS system to handle transactions and ensure accurate cash handling
+- Maintained store cleanliness and layout while working in a fast-paced, team-oriented environment
+
+Volunteer Experience
+Sung Lee Taekwondo – Flagman during tournaments
+St. Matthew Church – Post-service cleaning and sanitization
+
+Awards
+Honour Roll – Cardinal Leger Jr. High and Archbishop O’Leary High School
+
+
+Division II Volleyball City Champion (Grade 9)
+
+References
+Available upon request
